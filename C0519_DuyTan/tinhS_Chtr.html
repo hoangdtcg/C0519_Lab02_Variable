@@ -6,10 +6,10 @@
 </head>
 <body>
     <script>
-        a=Number(prompt("Nhap chieu dai: "));
-        b=Number(prompt("Nhap chieu rong: "));
-        let S=a*b
-        let C=2*(a+b)
+        bankinh=Number(prompt("Nhap ban kinh: "));
+        let pi=Math.PI
+        let S=(pi*bankinh*bankinh).toFixed(3)
+        let C=(2*bankinh*pi).toFixed(3)
         document.write('Dien tich: '+S)
         document.write('<br/>Chu vi: '+C)
     </script>
