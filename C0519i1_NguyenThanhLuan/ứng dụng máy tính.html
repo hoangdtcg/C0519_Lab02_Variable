@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1:<br>
+<input type="text" id="1">
+<br>
+2:<br>
+<input type="text" id="2">
+<br> <br>
+<button onclick="cong()">+</button>
+<button onclick="tru()">-</button>
+<button onclick="nhan()">*</button>
+<button onclick="chia()">/</button>
+<script>
+    function cong() {
+        let a = parseInt(document.getElementById("1").value);
+        let b = parseInt(document.getElementById("2").value);
+        tong = a + b;
+        document.write(tong);
+    }
+    function tru() {
+        let a = parseInt(document.getElementById('1').value);
+        let b = parseInt(document.getElementById('2').value);
+        hieu = a - b;
+        document.write(hieu);
+    }
+    function nhan() {
+        let a = parseInt(document.getElementById('1').value);
+        let b = parseInt(document.getElementById('2').value);
+        tich = a*b;
+        document.write(tich);
+    }
+    function chia() {
+        let a = parseInt(document.getElementById('1').value);
+        let b = parseInt(document.getElementById('2').value);
+        chia = a/b;
+        document.write(chia);
+    }
+</script>
+
+</body>
+</html>
