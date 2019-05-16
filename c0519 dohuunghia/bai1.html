@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+            let physic1, chemistry1, biology1 ;
+            physic1 = prompt("Nhap diem mon vat ly");
+            chemistry1 = prompt("Nhap diem mon hoa hoc");
+            biology1 = prompt("Nhap diem mon sinh hoc");
+            let physic = parseInt(physic1);
+            let chemistry = parseInt(chemistry1);
+            let biology = parseInt(biology1);
+            let diemTrungBinh = (physic+chemistry+biology)/3;
+            let tongdiem = physic + chemistry + biology;
+            document.writeln("Diem trung binh cua 3 mon la :" + diemTrungBinh );
+            document.writeln("</br>");
+            document.writeln("Tong diem 3 mon la : " + tongdiem);
+    </script>
+</body>
+</html>
