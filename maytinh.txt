@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    firstnumber:<br>
+    <input type="text" id= "Firstnumber">
+    <br>
+    secondnumber:<br>
+    <input type="text" id="Secondnumber">
+    <br><br>
+    <button onclick ="sum()">+</button>
+    <button onclick = "tru()">-</button>
+    <button onclick = "nhan()">*</button>
+    <button onclick = "chia()">/</button>
+    <script>
+        function sum()
+        {
+            let a = parseInt(document.getElementById("Firstnumber").value);
+            let b = parseInt(document.getElementById("Secondnumber").value);
+            tong = a +b;
+            document.write(tong);
+        }
+        function tru() {
+            let a = parseInt(document.getElementById("Firstnumber").value);
+            let b = parseInt(document.getElementById("Secondnumber").value);
+            hieu = a - b;
+            document.write(hieu);
+        }
+        function nhan() {
+            let a = parseInt(document.getElementById("Firstnumber").value);
+            let b = parseInt(document.getElementById("Secondnumber").value);
+            tich = a * b;
+            document.write(tich);
+        }
+        function chia() {
+            let a = parseInt(document.getElementById("Firstnumber").value);
+            let b = parseInt(document.getElementById("Secondnumber").value);
+            thuong = a / b;
+            document.write(thuong);
+        }
+    </script>
+
+</body>
+</html>
