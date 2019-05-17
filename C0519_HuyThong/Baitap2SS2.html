@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertmoney</title>
+</head>
+<body>
+<div style="text-align: center;"></div>
+<table style="width:50%">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th><input type="number" id="cot1" name="Amount"></th>
+        <th>
+            <select id="cot2">
+                <option value="1">VND</option>
+                <option value="16000">AUD</option>
+                <option value="23000">USD</option>
+                <option value="26000">EUR</option>
+            </select>
+        </th>
+        <th>
+            <select id="cot3">
+                <option value="26000">EUR</option>
+                <option value="23000">USD</option>
+                <option value="16000">AUD</option>
+                <option value="1">VND</option>
+            </select>
+        </th>
+        <th>
+            <button type="button" id="money" onclick="convert()" >Convert </button>
+        </th>
+    </tr>
+</table><p></p>
+<p id="money1"></p>
+<script> function convert(){
+    let a = parseInt(document.getElementById("cot1").value);
+    let b = parseInt(document.getElementById("cot2").value);
+    let c = parseInt(document.getElementById("cot3").value);
+    let d= a*b/c;
+    let bluecolor= "Result " + d;
+    let output= bluecolor.fontcolor("red");
+    document.getElementById("money1").innerHTML = output;
+}
+</script>
+</form>
+</body>
+</html>
