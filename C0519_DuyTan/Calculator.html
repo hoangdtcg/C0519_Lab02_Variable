@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: greenyellow;
+            margin: 120px;
+        }
+        .center {
+            text-align: center;
+            background-color: darkolivegreen;
+            width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        input[type=text] {
+            width: 150px;
+        }
+        input[type=submit] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="center">
+        <h1>Caculator</h1>
+            <input type="text" placeholder="Nhập giá trị thứ nhất" value="" id="firstnum">
+            <input type="text" placeholder="Nhập giá trị thứ hai" value="" id="secondnum">
+            <br>
+            <br>
+                <input type="submit" value="Addition (+)" onclick="cong()">
+                <input type="submit" value="Subtraction (-)" onclick="tru()">
+                <input type="submit" value="Multiplication (*)" onclick="nhan()">
+                <input type="submit" value="Division (/)" onclick="chia()">
+                <br>
+                <br>
+        Kết quả phép tính được hiển thị TẠI ĐÂY:
+        <input type="text" value="" id="result" readonly>
+    </div>
+    <script>
+        let a=document.getElementById("firstnum");
+        let b=document.getElementById("secondnum");
+        function cong() {
+            so_a = Number(a.value);
+            so_b = Number(b.value);
+            let tong= so_a+so_b;
+            document.getElementById("result").value = +tong;
+        }
+        function tru() {
+            so_a = Number(a.value);
+            so_b = Number(b.value);
+            let hieu= so_a-so_b;
+            document.getElementById("result").value = +hieu;
+        }
+        function nhan() {
+            so_a = Number(a.value);
+            so_b = Number(b.value);
+            let tich= so_a*so_b;
+            document.getElementById("result").value = +tich;
+        }
+        function chia() {
+            so_a = Number(a.value);
+            so_b = Number(b.value);
+            let thuong= so_a/so_b;
+            document.getElementById("result").value = +thuong;
+        }
+    </script>
+</body>
+</html>

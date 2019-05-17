@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Currency</title>
+    <style>
+        .center {
+            text-align: center;
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-radius: 3px;
+            background-color: greenyellow;
+            padding: 10px;
+        }
+        body {
+            background-color: aqua;
+            margin: 150px;
+        }
+        input[type=submit] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+        <div class="center">
+            <h1>Convert Currency</h1>
+                        <input type="text" value="" id="first">
+                        <br>
+                            <select id="tygia1">
+                                <option value="23000">USD</option>
+                                <option value="26000">EUR</option>
+                                <option value="32000">GBP</option>
+                                <option value="1">VND</option>
+                            </select>
+                             ==> <select id="tygia2">
+                                <option value="1">VND</option>
+                                <option value="23000">USD</option>
+                                <option value="26000">EUR</option>
+                                <option value="32000">GBP</option>
+                            </select>
+                    <script>
+                        function convertval() {
+                            let firstcurr=document.getElementById("first").value;
+                            let tygia=document.getElementById("tygia1").value/document.getElementById("tygia2").value
+                            let convertcurr=(firstcurr*tygia).toFixed(3)
+                            document.getElementById("result").value = +convertcurr;
+                        }
+                    </script>
+                    <br>
+                    <input type="submit" value="Convert" onclick="convertval()">
+                    <br><b>Số tiền bạn có sau khi quy đổi:</b><br>
+                    <input type="text" value="" id="result" readonly>
+                    </form>
+        </div>
+</body>
+</html>
