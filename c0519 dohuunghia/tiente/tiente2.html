@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<div style="text-align: center;">[Bài tập] Ứng dụng chuyển đổi tiền tệ</div>
+<table style="width:50%">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th><input type="number" id="cot1" name="Amount" placeholder="amount of money"></th>
+        <th>
+            <select id="cot2">
+                <option value="1">VND</option>
+                <option value="16000">AUD</option>
+                <option value="23000">USD</option>
+            </select>
+        </th>
+        <th>
+            <select id="cot3">
+                <option value="23000">USD</option>
+                <option value="16000">AUD</option>
+                <option value="1">VND</option>
+            </select>
+        </th>
+        <th>
+            <button type="button" id="money" onclick="changemoney()" >Convert </button>
+        </th>
+    </tr>
+</table><p></p>
+<p id="money1"></p>
+<script src="money.js"></script>
+</body>
+</html>
