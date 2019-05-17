@@ -5,21 +5,46 @@
     <title>Maytinh</title>
 </head>
 <body>
-     <h1>
+
          <p>CACULATOR</p>
-     </h1>
+
 <form>
-           <input type="Number"><br>
-           <input type="Number"><br>
-    <h2>
-        <button type="Addition(+)">Addition(+)</button>
-        <button type="Subtration(-)">Subtration(-)</button>
-        <button type="Mutiplication(x)">Mutiplication(x)</button>
-        <button type="Division(/)">Division(/)</button>
-    </h2>
-    <h3>
-        <p>KET QUA : </p>
-    </h3>
+           <input type="number" id="So1">
+           <input type="number" id="So2"><br>
+
+        <button type="button" onclick="cong()" id="Addition">Addition(+)</button>
+        <button type="button" onclick="tru()" id="Subtration">Subtration(-)</button>
+        <button type="button" onclick="nhan()" id="Mutiplication">Mutiplication(x)</button>
+        <button type="button" onclick="chia()" id="Division">Division(/)</button>
+
+
+<p type="text" id="KETQUA">KET QUA LA:</p>
+    <script>
+        function cong() {
+            let a = parseInt(document.getElementById("So1").value);
+            let b = parseInt(document.getElementById("So2").value);
+            let c = a+b;
+            document.getElementById("KETQUA").innerHTML+=c;
+        }
+        function tru() {
+            let a = parseInt(document.getElementById("So1").value);
+            let b = parseInt(document.getElementById("So2").value);
+            let c = a-b;
+            document.getElementById("KETQUA").innerHTML+=c;
+        }
+        function nhan() {
+            let a = parseInt(document.getElementById("So1").value);
+            let b = parseInt(document.getElementById("So2").value);
+            let c = a*b;
+            document.getElementById("KETQUA").innerHTML+=c;
+        }
+        function chia() {
+            let a = parseInt(document.getElementById("So1").value);
+            let b = parseInt(document.getElementById("So2").value);
+            let c = a/b;
+            document.getElementById("KETQUA").innerHTML+=c;
+        }
+    </script>
 </form>
 </body>
 </html>
