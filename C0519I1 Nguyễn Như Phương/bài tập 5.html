@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<form>
+
+
+    <input type="number" id="nhap1">
+    <input type="number" id="nhap2">
+    <br/>
+    <select id="phep_toan">
+        <option name="phepcong" value="cong">+</option>
+        <option name="pheptru" value="tru">-</option>
+        <option name="phepnhan" value="nhan">*</option>
+        <option name="phepchia" value="chia">/</option>
+    </select>
+    <p id="result"></p>
+    <button type="button" onclick="ketqua()">Submit</button>
+    <script>
+        let a = document.getElementById("nhap1");
+        let b = document.getElementById("nhap2");
+        function ketqua() {
+            let number1 = parseFloat(a.value);
+            let number2 = parseFloat(b.value);
+            let phep_toan = document.getElementById("phep_toan").value;
+            console.log(phep_toan);
+            if (phep_toan == "cong") {
+                result = number1 + number2;
+                console.log(result)
+                document.getElementById("result").innerHTML = result;
+            }
+            if(phep_toan =="tru"){
+                let number1 = parseFloat(a.value);
+                let number2 = parseFloat(b.value);
+                result =number1 - number2
+                document.getElementById("result").innerHTML= result;
+
+            } if(phep_toan =="nhan") {
+                let number1 = parseFloat(a.value);
+                let number2 = parseFloat(b.value);
+                result =number1 * number2;
+                document.getElementById("result").innerHTML = result;
+            } if(phep_toan =="chia") {
+                let number1 = parseFloat(a.value);
+                let number2 = parseFloat(b.value);
+                result =number1 / number2;
+                document.getElementById("result").innerHTML = result;
+            }
+        }
+
+
+    </script>
+</form>
+</body>
+
+</html>

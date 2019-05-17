@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi tiền </title>
+</head>
+<h1>Quỷ đổi tiền</h1>
+<body>
+    Amount
+    <input type="number" id="Amount">
+    <br/>
+    FormCurreny
+    <select id="money">
+        <option name="usd" value="1">USD</option>
+        <option name="vnd" value="23000">VND</option>
+        <option name="vnd" value="0.85">EU</option>
+    </select>
+    FormCurreny
+    <select id="money2">
+        <option name="vnd" value="23000"> VND</option>
+        <option name="USD" value="1">USD</option>
+        <option name="vnd" value="0.85">EU</option>
+
+    </select>
+    <br/>
+    <button onclick="tiente()">Submit</button>
+    <p id="result"></p>
+<script>
+        function tiente() {
+            let amount = parseFloat(document.getElementById("Amount").value);
+            let money = parseFloat(document.getElementById("money").value);
+            let money2 = parseFloat(document.getElementById("money2").value);
+
+            result = amount * money2 / money;
+            document.getElementById("result").innerHTML = result;
+
+        }
+    </script>
+</body>
+</html>
