@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    /*.box {*/
+    /*    border-radius: 30%;*/
+    /*    width: 500px;*/
+    /*    height: 300;*/
+    /*    margin: auto;*/
+    /*    margin-top: 5%;*/
+    /*    padding: 100px;*/
+    /*    color: blue;*/
+    /*    background-color: red;*/
+
+
+    /*}*/
+
+    /*button {*/
+    /*    height: 30px;*/
+    /*    width: 60px;*/
+    /*    background-color: beige;*/
+    /*    border-radius: 3%;*/
+    /*    color: darkmagenta;*/
+
+    /*}*/
+
+    /*.head {*/
+    /*    text-align: center;*/
+    /*    height: 200px;*/
+    /*    width: 100px;*/
+    /*    font-family: monospace;*/
+    /*}*/
+
+    /*h1 {*/
+    /*    position: center;*/
+    /*}*/
+
+    /*.display {*/
+
+    /*}*/
+
+    /*table {*/
+    /*    width: 100%;*/
+    /*}*/
+
+    /*h2 {*/
+    /*    font-size: 12px;*/
+    /*    font-family: monospace;*/
+
+    /*}*/
+
+    /*th {*/
+    /*    padding: 5px;*/
+    /*}*/
+
+    /*.input {*/
+    /*    width: 250px;*/
+    /*}*/
+
+</style>
+<div class="box">
+    <h1>CONVERT MONEY</h1>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>FromCurrency</th>
+            <th>ToCurrency</th>
+
+        </tr>
+        <tr>
+            <th>
+                <input class="input" id="money">
+            </th>
+            <th>
+                <select id="FromCurrency">
+                    <option value="1">USD</option>
+                    <option value="23000">VND</option>
+                    <option value="0.86">EURO</option>
+
+                </select>
+            </th>
+            <th>
+                <select id="ToCurrency">
+                    <option value="1">USD</option>
+                    <option value="23000">VND</option>
+                    <option value="0.86">EURO</option>
+
+                </select>
+            </th>
+            <td>
+                <button type="button" onclick="tinhtoan()">Convert</button>
+            </td>
+
+        </tr>
+
+    </table>
+    <script>
+        function tinhtoan() {
+            console.log();
+            let a, b, c, d;
+            a = document.getElementById("money").value;
+            b = document.getElementById("FromCurrency").value;
+            c = document.getElementById("ToCurrency").value;
+            d = a * b / c;
+            document.write("so tien " + d);
+
+        }
+
+
+    </script>
+</div>
+</body>
+</html>
