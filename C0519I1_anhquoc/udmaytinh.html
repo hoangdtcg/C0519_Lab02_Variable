@@ -4,20 +4,62 @@
     <meta charset="UTF-8">
     <title>Ung dung may tinh</title>
     <style>
-        input[type=submit]
+        .center {
+            text-align: center;
+            width: 500px;
+            background-color: brown;
+            margin: 0 auto;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        input {
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        button
         {
             cursor: pointer;
         }
     </style>
 </head>
 <body>
+<form class="center">
 <h1>Caculator</h1>
-    <input type="text">
-    <input type="text"> <br><br>
-<input type="submit" value="Adition(+)">
-<input type="submit" value="Subtruction(-)">
-<input type="submit" value="Multiplication(X)">
-<input type="submit" value="Division(/)">
-
+    <input type="text" id="so thu nhat" placeholder=" nhap so thu nhat">
+    <input type="text" id="so thu hai" placeholder=" nhap so thu hai"> <br><br>
+       <button type="button" onclick="cong()" id="tong">Adition(+)</button>
+       <button type="button" onclick="tru()" id="hieu">Subtruction(-)</button>
+       <button type="button" onclick="nhan()" id="tich">Multiplication(X)</button>
+       <button type="button" onclick="chia()" id="thuong">Division(/)</button>
+       <br><br>
+    <input type="text" id="kq" value=" ket qua:" readonly>
+</form>
+    <script>
+        function cong() {
+            let a = parseInt(document.getElementById("so thu nhat").value);
+            let b = parseInt(document.getElementById("so thu hai").value);
+            let tong = a+b;
+         document.getElementById("kq").value = " ket qua: " + tong;
+        }
+        function tru() {
+            let a = parseInt(document.getElementById("so thu nhat").value);
+            let b = parseInt(document.getElementById("so thu hai").value);
+            let hieu = a-b;
+         document.getElementById("kq").value = " ket qua: " + hieu;
+        }
+        function nhan() {
+            let a = parseInt(document.getElementById("so thu nhat").value);
+            let b = parseInt(document.getElementById("so thu hai").value);
+            let tich = a*b;
+         document.getElementById("kq").value = " ket qua: " + tich;
+        }
+        function chia() {
+            let a = parseInt(document.getElementById("so thu nhat").value);
+            let b = parseInt(document.getElementById("so thu hai").value);
+            let thuong = (a/b).toFixed(2);
+         document.getElementById("kq").value = " ket qua: " + thuong;
+        }
+    </script>
 </body>
 </html>

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Doi Tien</title>
     <style>
+        .center{
+            text-align: center;
+            width: 500px;
+            margin: 0 auto;
+        }
         body {
             background-color: lightblue
         }
@@ -14,9 +19,8 @@
             margin: 8px o;
             display: inline-block;
             border-radius: 4px;
-            box-sizing: border-box;
         }
-        input[type=submit] {
+        button {
             width: 50%;
             background-color: green;
             color: white;
@@ -41,29 +45,46 @@
             width: 50%;
             text-align: center;
         }
+        h3 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 <h3>Nhap so tien va chon loai tien</h3>
-<div>
+<div class="center">
 <form>
     Amount <br>
-    <input type="text" name="Amount">
+    <input type="text" placeholder="nhap so tien can quy doi" id="Amount">
     <br>
     From Currency <br>
-    <select>
-        <option value="VND">VND</option>
-        <option value="USD">USD</option>
+    <select id="From">
+        <option value="1">VND</option>
+        <option value="23000">USD</option>
+        <option value="26000">euro</option>
+        <option value="33000">gbp</option>
     </select>
     <br>
     To Currency<br>
-    <select>
-        <option value="VND">VND</option>
-        <option value="USD">USD</option>
+    <select id="To">
+        <option value="1">VND</option>
+        <option value="23000">USD</option>
+        <option value="26000">euro</option>
+        <option value="33000">gbp</option>
     </select>
     <br><br>
-    <input type="submit" value="Convert">
+    <button type="button" onclick="doitien()">Submit</button><br><br>S
+    <input type="text" value="ket qua" id="Result">
 </form>
 </div>
+<script>
+    function doitien() {
+        let a = document.getElementById("Amount").value;
+        let b = document.getElementById("From").value;
+        let c = document.getElementById("To").value;
+        d = a*b/c
+        document.getElementById("Result").innerHTML = "ket qua la: " +d;
+    }
+</script>
 </body>
 </html>
