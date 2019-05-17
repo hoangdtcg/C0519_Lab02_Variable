@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:orange;">
+<table style="width:100%">
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Curency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th><input type="number" id="cot1" name="Amount" placeholder="amount of monney"></th>
+        <th>
+            <select id="cot2">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+                <option value="750">Bat</option>
+                <option value="220">Yen</option>
+            </select>
+        </th>
+        <th>
+            <select id="cot3">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+                <option value="750">Bat</option>
+                <option value="220">Yen</option>
+            </select>
+        </th>
+        <th>
+            <button type="button" id="monney" onclick="Doitien()" >Convert </button>
+        </th>
+    </tr>
+</table><p></p>
+<p id="ketqua">ket qua la:</p>
+<script>
+    function Doitien() {
+        D = parseInt(document.getElementById("cot1").value)*parseInt(document.getElementById("cot2").value)/parseInt(document.getElementById("cot3").value);
+        document.getElementById('ketqua').innerHTML+=D;
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
