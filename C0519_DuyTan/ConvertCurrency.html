@@ -4,65 +4,54 @@
     <meta charset="UTF-8">
     <title>Convert Currency</title>
     <style>
-        body{
-            background-color: antiquewhite;
-            border: 1px solid green;
-            border-radius: 4px;
-        }
-        select{
-            width: 100px;
+        .center {
             text-align: center;
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-radius: 3px;
+            background-color: greenyellow;
+            padding: 10px;
         }
-        option{
-            text-align: center;
+        body {
+            background-color: aqua;
+            margin: 150px;
         }
-        input{
-            width: 300px;
-            text-align: center;
-        }
-        div{
-            text-align: center;
-            width: 100%;
+        input[type=submit] {
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-        <form>
-            <div>
-                <input type="text" placeholder="Nhập số tiền cần quy đổi">
-            </div>
-            <div>
-                From<br>
-                <select>
-                    <option value="VND">VND</option>
-                    <option value="USD">USD</option>
-                </select>
-            </div>
-            <div>
-                To<br>
-                <select>
-                    <option value="VND">VND</option>
-                    <option value="USD">USD</option>
-                </select>
-            </div>
-            <div>
-                <style>
-                input[type=button]
-                {
-                    background-color: #4CAF50;
-                    border: none;
-                    color: white;
-                    margin: 2px 0px;
-                    padding: 5px 10px;
-                    text-decoration: none;
-                    cursor: pointer;
-                    border-radius: 4px;
-                    width: 150px;
-                }
-                </style>
-                <br>
-                <input type="button" value="Convert" onclick="alert('Số tiền bạn có là: ');">
-            </div>
-        </form>
+        <div class="center">
+            <h1>Convert Currency</h1>
+                        <input type="text" value="" id="first">
+                        <br>
+                            <select id="tygia1">
+                                <option value="23000">USD</option>
+                                <option value="26000">EUR</option>
+                                <option value="32000">GBP</option>
+                                <option value="1">VND</option>
+                            </select>
+                             ==> <select id="tygia2">
+                                <option value="1">VND</option>
+                                <option value="23000">USD</option>
+                                <option value="26000">EUR</option>
+                                <option value="32000">GBP</option>
+                            </select>
+                    <script>
+                        function convertval() {
+                            let firstcurr=document.getElementById("first").value;
+                            let tygia=document.getElementById("tygia1").value/document.getElementById("tygia2").value
+                            let convertcurr=(firstcurr*tygia).toFixed(3)
+                            document.getElementById("result").value = +convertcurr;
+                        }
+                    </script>
+                    <br>
+                    <input type="submit" value="Convert" onclick="convertval()">
+                    <br><b>Số tiền bạn có sau khi quy đổi:</b><br>
+                    <input type="text" value="" id="result" readonly>
+                    </form>
+        </div>
 </body>
 </html>
