@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+    <style>
+    button {
+        width: 100px;
+        height: 100px;
+    }
+
+    input {
+        width: 400px;
+        height: 100px;
+    }
+</style>
+
 <body>
 <div>
     <div>
-        <input type = "text" id = "ketqua">
-    </div>
-    <div id = "cot1">
             <button value = "1" onclick = "ketqua.value+= this.value"> 1 </button>
             <button value = "2" onclick = "ketqua.value+= this.value"> 2 </button>
             <button value = "3" onclick = "ketqua.value+= this.value"> 3 </button>
@@ -31,6 +40,9 @@
             <button value = "-" onclick = "ketqua.value += this.value"> - </button>
             <button value = "*" onclick = "ketqua.value += this.value"> * </button>
             <button value = "/" onclick = "ketqua.value += this.value"> / </button>
+    </div>
+    <div>
+        <input type = "text" id = "ketqua">
     </div>
 </div>
 </body>
