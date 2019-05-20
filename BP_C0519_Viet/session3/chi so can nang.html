@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Height:
+<form action="/action.page.php"><input id="chieucao" type="number"></form>
+Weight:
+<form action="/action,page.php"><input id="cannang" type="number"></form>
+<p Click button below to calulator BMI/p>
+<button type="button" onclick="BMI()">BMI</button>
+<script>
+
+
+    function BMI() {
+        let chieucao = document.getElementById("chieucao").value;
+        let cannang = document.getElementById("cannang").value;
+        let tile = cannang/(chieucao*chieucao);
+        if (tile < 18) {
+            document.write("Underweight");
+        } else if (tile < 25.0) {
+                document.write("Normal");
+            } else if (tile < 30.0) {
+                    document.write("Overweight");
+                } else {
+                    document.write("Obese");
+                }
+        }
+
+
+
+</script>
+
+</body>
+</html>
