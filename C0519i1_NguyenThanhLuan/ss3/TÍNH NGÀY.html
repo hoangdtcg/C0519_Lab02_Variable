@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>nhập tháng</th>
+        <th>
+            <button type="button" onclick="tháng()" >Convert </button>
+        </th>
+    </tr>
+    <tr>
+        <th><input type = "number" id = month></th>
+    </tr>
+</table>
+<SCRIPT>
+    function tháng() {
+        broswer = parseInt(document.getElementById("month").value);
+        switch (broswer) {
+            case 1:
+                month = "tháng 1";
+                day = " có 31 ngày";
+                break;
+            case 2:
+                month = "tháng 2";
+                day = " có 28 hoặc 29 ngày";
+                break;
+            case 3:
+                month = "tháng 3";
+                day = " có 31 ngày";
+                break;
+            case 4:
+                month = "tháng 4";
+                day = " có 30 ngày";
+                break;
+            case 5:
+                month = "tháng 5";
+                day = " có 31 ngày";
+                break;
+            case 6:
+                month = "tháng 6";
+                day = " có 30 ngày";
+                break;
+            case 7:
+                month = "tháng 7";
+                day = " có 31 ngày";
+                break;
+            case 8:
+                month = "tháng 8";
+                day = " có 31 ngày";
+                break;
+            case 9:
+                month = "tháng 9";
+                day = " có 30 ngày";
+                break;
+            case 10:
+                month = "tháng 10";
+                day = " có 31 ngày";
+                break;
+            case 11:
+                month = "tháng 11";
+                day = " có 30 ngày";
+                break;
+            case 12:
+                month = "tháng 12";
+                day = " có 31 ngày";
+                break;
+        }
+        document.getElementById('month1').innerHTML = month+day;
+    }
+</SCRIPT>
+<p id = "month1"></p>
+</body>
+</html>
