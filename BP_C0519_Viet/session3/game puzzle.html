@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>;
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<img id="girl" src="images/minhnghi.jpg" height="300" width="500" onclick="changeimage()"/><br>
+<img id="girl2" src="images/kimsohuyn.jpg" height="300" width="500" onclick="changeimage2()"/><br>
+<img id="girl3" src="images/chipu.jpg" height="300" width="500" onclick="changeimage3()"/><br>
+<script>
+    let name = "minhnghi";
+
+    function changeimage() {
+        if (name === "minhnghi") {
+            name = "kimsohuyn";
+            document.getElementById("girl").src = "images/" + name + ".jpg";
+        } else if (name === "kimsohuyn") {
+            name = "chipu";
+            document.getElementById("girl").src = "images/" + name + ".jpg";
+        } else {
+            name = "minhnghi";
+            document.getElementById("girl").src = "images/" + name + ".jpg";
+        }
+        check();
+    }
+
+    let name2 = "kimsohuyn"
+
+    function changeimage2() {
+        if (name2 === "minhnghi") {
+            name2 = "kimsohuyn";
+            document.getElementById("girl2").src = "images/" + name2 + ".jpg";
+        } else if (name2 === "kimsohuyn") {
+            name2 = "chipu";
+            document.getElementById("girl2").src = "images/" + name2 + ".jpg";
+        } else {
+            name2 = "minhnghi";
+            document.getElementById("girl2").src = "images/" + name2 + ".jpg";
+        }
+        check();
+
+    }
+
+    let name3 = "chipu"
+
+    function changeimage3() {
+        if (name3 === "minhnghi") {
+            name3 = "kimsohuyn";
+            document.getElementById("girl3").src = "images/" + name3 + ".jpg";
+        } else if (name3 === "kimsohuyn") {
+            name3 = "chipu";
+            document.getElementById("girl3").src = "images/" + name3 + ".jpg";
+        } else {
+            name3 = "minhnghi";
+            document.getElementById("girl3").src = "images/" + name3 + ".jpg";
+        }
+        check();
+    }
+
+    function check() {
+        if (name === name2 && name2 === name3) {
+            alert("Done")
+        }
+    }
+
+</script>
+</body>
+</html>
