@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let inputdiemHoaHoc = prompt("enter chemical point");
+    let inputdiemVatLy = prompt("enter physical point");
+    let inputdiemSinhHoc = prompt("enter biological point");
+    let diemHoaHoc = parseFloat(inputdiemHoaHoc);
+    let diemvatly = parseFloat(inputdiemVatLy);
+    let diemsinhhoc = parseFloat(inputdiemSinhHoc);
+    let diemtb = (diemHoaHoc + diemsinhhoc + diemvatly) / 3;
+    document.write("diem trung binh la" + diemtb);
+    document.write("<br/>");
+
+</script>
+
+
+</body>
+</html>
