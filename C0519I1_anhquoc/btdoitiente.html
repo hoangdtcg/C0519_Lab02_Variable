@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doi Tien</title>
+    <style>
+        .center{
+            text-align: center;
+            width: 500px;
+            margin: 0 auto;
+        }
+        body {
+            background-color: lightblue
+        }
+
+        input[type=text] select{
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px o;
+            display: inline-block;
+            border-radius: 4px;
+        }
+        button {
+            width: 50%;
+            background-color: green;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input{
+            width: 50%;
+            text-align: center;
+        }
+        select{
+            width: 50%;
+            text-align: center;
+        }
+        div {
+            border-radius: 5px;
+            background-color: aqua;
+            padding: 20px;
+            width: 50%;
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h3>Nhap so tien va chon loai tien</h3>
+<div class="center">
+<form>
+    Amount <br>
+    <input type="text" placeholder="nhap so tien can quy doi" id="Amount">
+    <br>
+    From Currency <br>
+    <select id="From">
+        <option value="1">VND</option>
+        <option value="23000">USD</option>
+        <option value="26000">euro</option>
+        <option value="33000">gbp</option>
+    </select>
+    <br>
+    To Currency<br>
+    <select id="To">
+        <option value="1">VND</option>
+        <option value="23000">USD</option>
+        <option value="26000">euro</option>
+        <option value="33000">gbp</option>
+    </select>
+    <br><br>
+    <button type="button" onclick="doitien()">Submit</button><br><br>S
+    <input type="text" value="ket qua" id="Result">
+</form>
+</div>
+<script>
+    function doitien() {
+        let a = document.getElementById("Amount").value;
+        let b = document.getElementById("From").value;
+        let c = document.getElementById("To").value;
+        d = a*b/c
+        document.getElementById("Result").innerHTML = "ket qua la: " +d;
+    }
+</script>
+</body>
+</html>
