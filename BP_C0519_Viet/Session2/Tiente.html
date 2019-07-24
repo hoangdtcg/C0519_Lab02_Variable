@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+Amount:
+<form action="/action_page.php"><input id="Amount" name='amount' type="nưmber"></form>
+
+From Curency:
+<form>
+    <select id="from">
+        <option value="VND">< Viet Nam Dong ></option>
+        <option value="USD">< Dollar ></option>
+    </select>
+</form>
+To Currency:
+<form>
+    <select id="to">
+        <option id="vnd" value="VND"> Viet Nam Dong></option>
+        <option id="usd" value="USD"> Dollar ></option>
+    </select></form>
+<button type="button" onclick="Convert()"> Convert
+</button>
+<script>
+    function Convert() {
+        let a = parseFloat(document.getElementById("Amount").value);
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let result1 = a * 23;
+        let result2 = a / 23;
+        if (from === 'VND') {
+            if (to === 'USD') {
+                document.write("Result is:" + result2 + to);
+            } else {
+                document.write("Result is:" + from);
+            }
+        }
+        if (from === 'Dollar') {
+            if (to === 'VND') {
+                document.write("Result is:" + result2 + to);
+            } else {
+                document.write("Result is:" + result1 + from);
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

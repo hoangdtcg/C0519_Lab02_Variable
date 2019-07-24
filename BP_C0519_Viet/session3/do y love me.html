@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> DO Y LOVE ME </p>
+<button type="button"  style="position: absolute;leff:100px;top:150px;" onclick="co()"> Yes </button>
+<button  id="nein" type="button"  style="position: absolute;left: 200px;top: 150px;" onmouseover="khong()"> NO </button>
+<script>
+    function co() {
+        alert(":v");
+    }
+
+    function khong() {
+        let a = window.innerHeight;
+        let b = window.innerWidth;
+        let vitri = Math.floor(Math.random()*a);
+        let vitri2= Math.floor(Math.random()*b);
+        button = document.getElementById("nein");
+        button.style.left = vitri +'px';
+        button.style.top = vitri2 + 'px';
+
+    }
+</script>
+
+
+
+</body>
+</html>

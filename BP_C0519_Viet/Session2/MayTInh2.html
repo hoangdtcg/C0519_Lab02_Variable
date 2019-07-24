@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+So 1:
+<form action="/action_page.php"><input id="so1" type="number"></form>
+So 2:
+<form action="/action_page.php"><input id="so2" type="number"></form>
+<select id="toantu">
+    <option id="cong" value="Cong">Cong</option>
+    <option id="tru" value="Tru">Tru</option>
+    <option id="nhan" value="Nhan">Nhan</option>
+    <option id="chia" value="Chia">Chia</option>
+
+doccument.writeddoccumdocdoccument.writecdoccument.writedoccument.writeument.writedoccument.writeent.writeoccument.write
+</select>
+<button type="button" onclick="ketqua()"> Bắt đầu
+</button>
+<p id="Ketquala" type="text"></p>
+<script>
+
+    function ketqua() {
+        let a = parseFloat(document.getElementById("so1").value);
+        let b = parseFloat(document.getElementById("so2").value);
+        let toantu = document.getElementById("toantu").value;
+        if (toantu == 'Cong') {
+            let result1 = parseFloat(a + b);
+            document.getElementById("Ketquala").innerHTML="Ket qua la:" + result1;
+        }
+        if (toantu == 'Tru') {
+            let result2 = parseFloat(a - b);
+            document.getElementById("Ketquala").innerHTML="Ket qua la:" +result2;
+        }
+
+        if (toantu == 'Nhan') {
+            let result3 = parseFloat(a * b);
+            document.getElementById("Ketquala").innerHTML="Ket qua la:"+ result3
+
+        }
+
+        if (toantu == 'Chia') {
+            let result4 = parseFloat(a / b);
+           document.getElementById("Ketquala").innerHTML="Ket qua la:" + result4
+        }
+
+
+    }
+
+
+</script>
+
+
+</body>
+</html>
